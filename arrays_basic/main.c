@@ -3,17 +3,19 @@
 
 int main()
 {
-    int num,i, sum=0;
+    int num,i,sum=0;
     float perc;
+    printf("Applicable for total marks = 100 \n");
+    printf("Total number of subjects: ");
     scanf("%d",&num);
     int marks[num];
-    printf("Enter the marks of the students");
     for (i=0;i<num;i++)
     {
+    	printf("Enter the marks of the subject %d: ", i+1);
         scanf("%d",&marks[i]);
         sum += marks[i];
     }
-    perc = sum*100/1000;
-    printf("\n the percentage of marks obtained is %f",perc);
+    perc = sum/i;
+    printf("\n The percentage of marks obtained is: %f",perc);
     return 0;
 }
